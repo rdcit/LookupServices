@@ -36,7 +36,7 @@ function HPO(groupname, colNr) {
 function connectToHPOService(me, clNr) {
 	if (me.attr("id") != undefined) {
 
-		var url = "//gateway.rd.trc.nihr.ac.uk/webservices/hpo/lookup.php?q=";
+		var url = "https://gateway.rd.trc.nihr.ac.uk/webservices/hpo/lookup.php?q=";
 		var term = me.val();
 		var urlToService = url + term;
 		var myParent = me.parent();
@@ -116,7 +116,7 @@ function HPO_nonrepeating(termRef,codeRef){
 function connectToHPOServiceNonRep(termField, codeField) {
 
 
-		var url = "//gateway.rd.trc.nihr.ac.uk/webservices/hpo/lookup.php?q=";
+		var url = "https:////gateway.rd.trc.nihr.ac.uk/webservices/hpo/lookup.php?q=";
 		var termF = jQuery("#"+termField).parent().parent().find("input");
 		var term = termF.val();
 		var urlToService = url + term;
