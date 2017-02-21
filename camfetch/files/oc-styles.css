@@ -1,0 +1,42 @@
+/* Style sheet for styling things added to CRFs in forms where we want to do something different than the default */
+  .loading {
+   display: none;
+   width: 16px;
+   height: 16px;
+   background-image: url(loading.gif);
+   vertical-align: text-bottom;
+  }
+
+  /* autocomplete adds the ui-autocomplete-loading class to the textbox when it is _busy_, use general sibling combinator ingeniously */
+  #autocomplete.ui-autocomplete-loading ~ .loading {
+   display: inline-block;
+
+  }
+  .ui-autocomplete .termname {
+   margin-right: 1em;
+   font-size: 1.3em;
+  }
+  .ui-autocomplete .termid {
+   font-size: 1em;
+  }
+  .ui-autocomplete .descr {
+   display: block;
+   font-size: 1em;
+   width: 700px; 
+   word-wrap: break-word;
+  }
+.ui-autocomplete .syn {
+   display: block;
+   font-size: 1em;
+   width: 700px; 
+   word-wrap: break-word;
+  }
+  
+.ui-autocomplete .icd10 {
+   display: block;
+   font-size: 1.2em;
+   width: 700px; 
+   word-wrap: break-word;
+  }
+  ul {
+  }

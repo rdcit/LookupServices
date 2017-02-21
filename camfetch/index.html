@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Camfetch Copy/Paste page</title>
+</head>
+<body>
+<p>
+<center><h2>Camfetch Copy/Paste page</h2></center>
+</p>
+<br/>
+
+<p>
+<h3>Human Phenotype Ontology Lookup for repeating items</h3>
+
+<b>Sections – Instructions:</b>
+<xmp>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery.min.js"></script>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.min.js"></script> 
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/hpo.js"></script>
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.css">
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/oc-styles.css"> 
+</xmp>
+<b>Items – Left item text</b> [Where the first parameter (MyGroupLabel in this example) should be equal to the GROUP_LABEL value, followed by the number which refers to the Term input field position in the grid. The HPO code will be inserted to the input field followed by the Term field.]:
+<xmp>
+Term
+<script>
+jQuery(document).ready(function() {
+HPO("MyGroupLabel", 1);
+});
+</script>
+</xmp>
+
+<img src="img/hpo.png"/>
+</p>
+<br/>
+
+
+<p>
+<h3>Human Phenotype Ontology Lookup for NON repeating items</h3>
+
+<b>Sections – Instructions:</b>
+<xmp>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery.min.js"></script>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.min.js"></script> 
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/hpo.js"></script>
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.css">
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/oc-styles.css"> 
+</xmp>
+<b>Items – Left item text</b>
+<xmp>
+Term
+<div id="myTermField"></div>
+  
+Code
+<div id="myCodeField"></div>
+</xmp>   
+<b>Items – Right item text</b> [Where the first parameter (MyTermField in this example) should be equal to the div id value used to identify the Term input field, followed by the div id used to identify the code input field.
+<xmp>
+<script>
+jQuery(document).ready(function() {
+HPO_nonrepeating("myTermField", "myCodeField");
+});
+</script>
+</xmp>
+
+<img src="img/hpo_nonrep.png"/>
+</p>
+<br/>
+  
+  
+<p>
+<h3>SNOMED Lookup for repeating items</h3>
+
+<b>Sections – Instructions:</b>
+<xmp>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery.min.js"></script>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.min.js"></script> 
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.min.css">
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.css">
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/oc-styles.css">
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/snomed.js"></script>
+</xmp>
+<b>Items – Left item text</b> [Where the first parameter (MyGroupLabel in this example) should be equal to the GROUP_LABEL value, followed by the number which refers to the Term input field position in the grid. The SNOMED code will be inserted to the input field followed by the Term field.]:
+<xmp>
+SNOMED Term
+<script>
+jQuery(document).ready(function(){
+Snomed_rep("MyGroupLabel", 1);
+});
+</script>
+</xmp>
+
+<img src="img/snomed.png"/>
+</p>
+<br/>  
+
+
+<p>
+<h3>NHS Medication Lookup for repeating items</h3>
+
+<b>Sections – Instructions:</b>
+<xmp>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery.min.js"></script>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.min.js"></script>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/druglist.js"></script>
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.css">
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/oc-styles.css"> 
+</xmp>
+<b>Items – Left item text</b> [Where the first parameter (CurrentDrugs in this example) should be equal to the GROUP_LABEL value, 
+followed by the number which refers to the Drug name input field position in the grid, followed by the position of the drug code and the class. 
+<xmp>
+Drug name
+<script> 
+jQuery(document).ready(function(){
+drugList("CurrentDrugs",1,2,4);
+});
+</script>
+</xmp>
+
+<img src="img/druglist.png"/>
+</p>  
+  
+<br/>
+
+<p>
+<h3>OPCS Lookup for non-repeating items</h3>
+
+<b>Sections – Instructions:</b>
+<xmp>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery.min.js"></script>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.min.js"></script>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/opcs.js"></script>
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery-ui.css">
+<link rel="stylesheet" href="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/oc-styles.css"> 
+</xmp>
+<b>Items – Left item text: Procedure</b> 
+
+<xmp>
+Procedure
+<script> 
+jQuery(document).ready(function(){
+opcsList("opcsproc_1");
+ });
+ </script>
+</xmp>
+
+<b>Items – Right item text: Procedure</b> 
+<xmp>
+<div id="opcsproc_1"></div>
+</xmp>
+
+<b>Items – Left item text: SubProcedure</b> 
+<xmp>
+SubProcedure
+<div id="opcssubproc_1"></div>
+</xmp>
+
+<b>Items – Left item text: ProcedureCode</b> 
+<xmp>
+SubProcedure
+<div id="opcscode_1"></div>
+</xmp>
+
+<b>Note:</b> Users may have multiple procedures inserted into a CRF by pasting the script multiple times and change the number in the div id accordingly (ie. opcsproc_2, opcsproc_3, etc)
+<br/><br/>
+<img src="img/opcs.png"/>
+</p>  
+
+
+<br/>
+
+
+<p>
+<h3>Checkbox Format - Formats checkboxes into columns</h3>
+
+<b>Sections – Instructions:</b>
+<xmp>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/files/jquery.min.js"></script>
+<script src="https://gateway.rd.trc.nihr.ac.uk/camfetch/checkboxFormat.js"></script>
+</xmp>
+<b>Items – Left item text</b> [First parameter = div id of the checkboxes / Second parameter = number of checkbox columns required]:
+<xmp>
+Neuropathy type:
+<div ID="neuroType"></div>
+<script>
+  jQuery(document).ready (function($) {
+    checkboxFormat("neuroType", 2);
+  });
+</script>
+</xmp>
+
+<img src="img/checkboxFormat.png"/>
+</p>
+
+<br/>
+
+
+
+
+</body>
+</html>
